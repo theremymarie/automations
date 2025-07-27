@@ -109,23 +109,32 @@ In the first row, set up the following column headers: Timestamp, User Name, Use
 
 **IIII.III. Google Apps Script Code**
 The core logic resides in a Google Apps Script.
+
 1.)Go to Google Apps Script and create a new project.
+
 2.)Name the project (e.g., "AttendanceBotScript").
-3.)Replace the default Code.gs content with the JavaScript code that can be found in code.md
+
+3.)Replace the default Code.gs content with the JavaScript code that can be found in code.md here: https://github.com/theremymarie/automations/blob/main/code.md
+
 4.)Replace [Paste your Google Chat ID Here]: In the script, update the SPREADSHEET_ID constant with your actual Google Sheet ID.
+
 5.) Deploy as Web App:
     -In the Apps Script editor, click "Deploy" > "New deployment."
     -Select "Web app."
     -Set "Execute as: Me" (your Google account) and "Who has access: Anyone."
     -Authorize the script when prompted. This grants it the necessary permissions to access your Google Sheet and receive webhooks.
     -After successful deployment, you will get a Web app URL. Copy this URL.
+
 6.) Final Cloud Console Connection:
     -Go back to the Google Cloud Console: "APIs & Services" > "Google Chat API" > "Configuration" tab.
     -Under "Connection settings," ensure "HTTP endpoint URL" is selected. Paste the Web app URL you copied from Apps Script into the URL field.
     -Under "Triggers," select "Use a common HTTP endpoint URL for all triggers". Paste the same Web app URL into the "HTTP endpoint URL" field that appears here.
     -Click "SAVE" at the bottom of the page.
+
 **V. Usage**
+
 Once the bot is deployed and configured, you can interact with it in Google Chat:
+
 -Adding the Bot:
 -To a Direct Message (DM): Open Google Chat, click the "+" (New chat) button, and search for your bot's "App name". Click on its name to open a DM.
 -To an Existing Space (Group Chat/Room): Open the desired Google Chat space, click the "Add people" icon (or similar option), search for your bot's "App name", and add it.
